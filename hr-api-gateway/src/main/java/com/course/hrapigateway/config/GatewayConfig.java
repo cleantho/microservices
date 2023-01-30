@@ -14,6 +14,7 @@ public class GatewayConfig {
 				.route(r -> r.path("/payments/**").uri("lb://HR-PAYROLL"))
 				.route(r -> r.path("/workers/**").uri("lb://HR-WORKER"))
 				.route(r -> r.path("/workers").uri("lb://HR-WORKER"))
+				.route(r -> r.path("/users/**").uri("lb://HR-USER"))
 				.build();
 	}
 
