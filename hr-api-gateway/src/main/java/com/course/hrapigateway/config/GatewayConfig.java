@@ -15,6 +15,7 @@ public class GatewayConfig {
 				.route(r -> r.path("/workers/**").uri("lb://HR-WORKER"))
 				.route(r -> r.path("/workers").uri("lb://HR-WORKER"))
 				.route(r -> r.path("/users/**").uri("lb://HR-USER"))
+				.route(r -> r.path("/auth/**").uri("lb://HR-OAUTH"))
 				.build();
 	}
 
